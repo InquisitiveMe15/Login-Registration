@@ -1,0 +1,20 @@
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+body{
+    font-family: 'Ubuntu';
+    background-color: #d8a9ff;
+}
+.about{
+    padding: 5%;
+}
+.header{
+    font-style: italic;
+}
+.border{
+    margin-top: 5px;
+}
+
+

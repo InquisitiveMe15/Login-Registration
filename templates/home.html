@@ -1,0 +1,114 @@
+<html>
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+	<title>Home</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+	<!-- <style>
+		.navbar-nav {
+			margin-left: auto;
+		}
+
+		body{
+			font-family: 'Ubuntu';
+			background-color: #d6a1ee;
+		}
+		.about{
+			padding: 5%;
+		}
+		.bottom{
+			font-style: italic;
+		}
+		.header{
+			font-style: italic;
+		}
+	</style> -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark " style="background-color: #b74cff;">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="https://www.myfirstcollege.com/wp-content/uploads/2019/03/IIT-Indore-logo.jpg" alt=""
+					width="50" height="32" class="d-inline-block align-text-top">
+				IIT Indore CSE </a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link" href="#about">About</a>
+					<a class="nav-link active" aria-current="page" href="{{ url_for('courses') }}">Courses</a>
+					<a class=" btn nav-link active" aria-current="page" href="{{ url_for('logout') }}">Logout</a>
+				</div>
+			</div>
+	</nav>
+
+
+	<div align="center" class="border">
+		<div class=" img">
+			<img src="https://academic.iiti.ac.in/assets/img/slides/refine/logo2.jpg" alt=""
+			width="200" height="175" class="d-inline-block align-text-top">
+		</div>
+		<div class="header">
+			<h1>
+				Hi {{session.username}}!!
+			</h1>
+			<div>
+				<h1 class="word">Welcome To IIT Indore</h1>
+			</div>
+
+		</div>
+	<br><br>
+
+	<div align="center" class="campustour">
+		<a href="https://youtu.be/ASnDC7AhP3k">
+			<h1>IIT Indore Campus Tour</h1>
+		</a>
+	</div><br><br><br>
+	<div class="header" align="center">
+		<h3>ABOUT CSE</h3>
+	</div>
+	<div class="about" align="left">
+		<p id="about">
+			The Department of Computer Science and Engineering (CSE) was set up in July 2009. It is one of the
+			department under the School of Engineering and offers Bachelor of Technology (BTech) and Doctor of
+			Philosophy (PhD) programs. The department adopts a modern approach to teaching wherein students are
+			rendered in adequate academic freedom to innovate and learn in the process. State of the art
+			facilities including the latest software and advanced hardware are available in various laboratories
+			for the use in both teaching and research. This facilitates adequate implementation of major B.Tech
+			projects and for verification and validation of research results.<br><br>
+
+			The faculty members of the department are from diverse streams and specializations. Being a part of
+			an emerging and relatively new institute, together with extremely competent research faculty, the
+			Computer Science and Engineering faculty of IIT Indore offer a unique interactive platform for the
+			students to explore the arena of fundamental and applied research.<br><br>
+
+			Indore is fast developing into a major IT hub in central India. Organizations like CSC and Impetus
+			have a strong presence in the city and major players like TCS, Infosys, and Wipro are in the process
+			of setting up their offices. For the discipline this provides an excellent opportunity to foster
+			industry-academia partnerships.<br><br>
+		</p>
+	</div>
+	</div>
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

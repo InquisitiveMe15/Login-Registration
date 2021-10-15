@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <title>Courses</title>
+    <style>
+        body {
+            background-color: #d8a9ff;
+        }
+
+        .heading {
+            color: white;
+            background-color: blueviolet;
+        }
+
+        #inner-content {
+            background-color: #d8a9ff;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark " style="background-color: #b74cff;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.myfirstcollege.com/wp-content/uploads/2019/03/IIT-Indore-logo.jpg" alt=""
+                    width="50" height="32" class="d-inline-block align-text-top">
+                IIT Indore CSE </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
+                    <a class="nav-link" aria-current="page" href="{{ url_for('courses') }}">Courses</a>
+                    <a class=" btn nav-link active" aria-current="page" href="{{ url_for('logout') }}">Logout</a>
+                </div>
+            </div>
+    </nav>
+    <div align="center" class="heading">
+        <h2>Courses Offered</h2>
+    </div>
+    <div id="inner-content" align="center">
+        <div class="table-responsive" style="margin-top: 15px;">
+            <table id="courses" class="courselist">
+                <tbody>
+                    <tr>
+                        <th>Course-Code</th>
+                        <th>Course-name</th>
+                        <th>L-P-T____</th>
+                        <th>Credit</th>
+                    </tr>
+                    <tr>
+                        <td>CS 103</td>
+                        <td>Computer Programming    </td>
+                        <td>2-0-0____</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>CS153</td>
+                        <td>Computer Programming Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS201</td>
+                        <td>Discrete Mathematical Structures</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS202</td>
+                        <td>Automata Theory And Logic</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS203</td>
+                        <td>Data Structures And Algorithms</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS253</td>
+                        <td>Data Structures And Algorithms Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS204</td>
+                        <td>Design and Analysis of Algorithms</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS254</td>
+                        <td>Design and Analysis of Algorithms Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS206</td>
+                        <td>Login Design</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS256</td>
+                        <td>Login Design Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>____
+                    </tr>
+                    <tr>
+                        <td>CS207</td>
+                        <td>Database and Information System</td>
+                        <td>3-0-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS257</td>
+                        <td>Database and Information System Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS208</td>
+                        <td>Software Engineering</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS258</td>
+                        <td>Software Engineering Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS302</td>
+                        <td>Computer Graphics and Visualization</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS352</td>
+                        <td>Computer Graphics and Visualization Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS304N</td>
+                        <td>Computer Intelligence</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS354N</td>
+                        <td>Computer Intelligence Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS306</td>
+                        <td>Computer Networks</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS356</td>
+                        <td>Computer Networks</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS309</td>
+                        <td>Parallel Computing</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS359</td>
+                        <td>Parallel Computing Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS303</td>
+                        <td>Operating Systems</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS353</td>
+                        <td>Operating Systems Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS305</td>
+                        <td>Computer Architecture</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS355</td>
+                        <td>Computer Architecture Lab</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS307</td>
+                        <td>Optimization Algorithms and Techniques</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS357</td>
+                        <td>Optimization Algorithms and Techniques</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS308</td>
+                        <td>Compiler Techniques</td>
+                        <td>2-1-0____</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CS358</td>
+                        <td>Compiler Techniques</td>
+                        <td>0-0-3____</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>CS493</td>
+                        <td>BTech Project</td>
+                        <td>0-0-4____</td>
+                        <td>20</td>
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+        </div>
+        <div align="center" class="heading">
+            <h2>Elective Courses</h2>
+        </div>
+        <div id="inner-content">
+            <div class="table-responsive" style="margin-top: 15px;">
+                <table id="electivecourses" class="courselist">
+                    <tbody>
+                        <tr>
+                            <th>Course-Code</th>
+                            <th>Course-name</th>
+                            <th>L-P-T____</th>
+                            <th>Credit</th>
+                        </tr>
+                        <tr>
+                            <td>CS 401 / CS 601</td>
+                            <td>Soft Computing</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 404 / EE 304</td>
+                            <td>Digital Signal Processing</td>
+                            <td>3-1-0____</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>CS 406 / CS 606</td>
+                            <td>Data Mining and Data Warehousing</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 407</td>
+                            <td>Peripherals and Interfaces</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 408</td>
+                            <td>Algorithms for Convex Programming</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 409 / CS 609</td>
+                            <td>Advanced Topics in Database Management Systems</td>
+                            <td>2-1-0____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 410</td>
+                            <td>Genetic Algorithms</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 411</td>
+                            <td>Advanced Algorithms</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS412</td>
+                            <td>Pattern Recognition</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS413</td>
+                            <td>Topics in Artificial Intelligence Programming</td>
+                            <td>2-1-0____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS414/CS614</td>
+                            <td>Cloud Computing and Applications</td>
+                            <td>2-1-3____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 416 / CS 616</td>
+                            <td>Service Oriented Systems</td>
+                            <td>2-1-3____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 417 / CS 617</td>
+                            <td>Cryptography and Network Security</td>
+                            <td>2-0-3____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 418 / CS 618</td>
+                            <td>Systems and Usable Security</td>
+                            <td>2-0-3____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 419 / CS 619 / ICS 419</td>
+                            <td>Computer Vision</td>
+                            <td>2-0-3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 420 / CS 620</td>
+                            <td>Embedded Systems</td>
+                            <td>2-0-3____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS 422 / CS 622</td>
+                            <td>Numerical Simulation</td>
+                            <td>2-0-3____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS424</td>
+                            <td>Functional and Logic Programming</td>
+                            <td>2-0-2____</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CS701</td>
+                            <td>Selected Topics in Advanced Algorithms</td>
+                            <td>2-1-0____</td>
+                            <td>3</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
